@@ -285,6 +285,11 @@
             color: #c7c7c7;
             font-size: 14px;
             line-height: 1.4;
+            margin-bottom: 16px;
+        }
+
+        .strategy-in-image p:last-child {
+            margin-bottom: 0;
         }
 
         .modal-sidebar {
@@ -887,39 +892,77 @@
                 </div>
             `;
             
-            // Add strategy to image area
+            // Add strategy to image area with manual text for each post
             const modalImage = document.querySelector('.modal-image');
             let strategyHTML = `
                 <div style="color: #8e8e8e; font-size: 18px; margin-bottom: 20px;">Preview do Post</div>
             `;
             
-            // Add team card if it's the equipe post
-            if (postId === 'equipe') {
+            // Manual strategy text for each post
+            if (postId === 'segunda') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Nosso público são estudantes, ou devs que já trabalham, temos que pensar... o que os dois tem em comum? Simples. Ambos estão em uma segunda feira, voltaram de um fim de semana, e ambos programam. O fator viral não está em uma edição de cinema, ou roteiro espetacular, ele está no fator humano, e na conexão que o conteúdo tem com o público alvo, um post desse é um post simples, mas que maioria dos devs postariam no stories em uma segunda feira, ou no caso um reels bem feito. Nosso tráfego é orgânico, então é essencial que o compartilhamento seja feito de forma natural. Através da conexão direta. Quando um dev numa plena segunda-feira abre o insta e vê um post ou reels desse, ele automaticamente cria uma conexão com o conteúdo, ele olha pra esse post e diz: "mano, literalmente eu" Ainda mais se o conteúdo for engraçado, porque o cara vai pensar: meus amigos vão rir e ainda vão curtir meu story. Nesse post aqui podemos usar tanto um cenário engraçado de um dev cansado/influencer da atlética, quanto uma cena famosa de algum personagem de ressaca, e usar uma edição simples. Exemplo: na cena original escolhida o personagem olha para o computador com um video específico, mas podemos colocar um terminal, Basta criatividade.</p>
+                    </div>
+                `;
+            } else if (postId === 'terca') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>O plano aqui é tático e simples, e muito semelhante ao conteúdo da segunda-feira, ainda mais se for em formato de reels. Jogue a primeira pedra se você nunca mandou, ou recebeu um reels nesse estilo pra alguém, até eu que não passo muito tempo vendo reels, de vez em quando mando. Tudo que precisamos é que o usuário se identifique, ache engraçado e automaticamente mande via direct para todas as pessoas que ele sabe que vão se identificar com aquele reels. Isso é intuitivo, e automático, não precisamos inventar a roda, o algoritmo já "treinou" o lead pra fazer isso. O importante é usar um vídeo, música, ou efeito sonoro que já é viral, e se usarmos um influencer da sigma melhor ainda.</p>
+                    </div>
+                `;
+            } else if (postId === 'quarta') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Ideia 1: Instagram Carrossel ou Reels (17h) - "me diz que você é programador, sem dizer que é programador..." Setup, monster branco, terminal aberto, etc... Resultado: 1k-10k views.</p>
+                        <p>Ideia 2: Instagram Reels (17h) - "me diz em qual linguagem você programa, mas sem dizer qual é..." Aqui no design o fator decisivo é o texto, precisa ser um tamanho, estilo e posicionamento cirúrgicos, o background pode ser um vídeo de fundo que já é viral OU uma rotina de dev bem editada de fundo, de preferência com um influencer. Música: É obrigatório que esteja entre os 10 audios mais usados, provavelmente vai ser algum funk ou edit de funk. Essa parte é essencial, pois o vídeo não tem fala. Resultado: 2k-20k+ views.</p>
+                        <p>Comentário: Aqui, a barra de comentários são a chave, os comentários vão se tornar um ecossistema por si só, os mais engraçados e criativos consequentemente vão popular o reels. É de extrema importância que os seguidores ou membros da atlética comentem de forma estratégica no início pra alavancar.</p>
+                    </div>
+                `;
+            } else if (postId === 'quinta') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Aqui a criatividade não tem limites, pode ser uma cena de dois personagens brigando, pode ser um meme viral que entra no contexto, se for carrossel, pode ser texto com a identidade visual da sigma etc... Mas se já tivermos dois atores podemos colocar em ação, o que é mais recomendado.</p>
+                    </div>
+                `;
+            } else if (postId === 'sexta') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Aqui, podemos escolher usar um roteiro e influencers, ou fazer uma edição bem feita, como última opção podemos usar uma mudança, como por exemplo: "Se linguagens fossem personagens"</p>
+                    </div>
+                `;
+            } else if (postId === 'weekend') {
+                strategyHTML += `
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Aqui vamos descontruir a ideia que devs são bichos do mato: Todos que se identificarem, ou melhor, não se identificam com esse arquétipo passado, vão repostar o conteúdo gerando uma cadeia de lead e tráfego. É essencial usar pessoas da atlética, mas na falta uma cena viral tem o mesmo efeito. Precisamos usar um áudio viral, pense em que música estaria tocando de fundo.</p>
+                        <p>Espera, mas é verdade? Sim, MUITA gente do curso sai, e a maioria tem estereotipos muito diferentes do "dev comum". O que estamos fazendo é bem mais que viralizar um reels, mas descontruir velhos paradigmas sociais através da sigma.</p>
+                    </div>
+                `;
+            } else if (postId === 'equipe') {
                 strategyHTML += `
                     <div class="strategy-in-image">
                         <h3>Equipe</h3>
                         <p>Pesquisa, Documentação e Site: Elliot | Design e Criação de Artes: Felipe | Postagem e Copy: Nathaly</p>
                     </div>
+                    <div class="strategy-in-image">
+                        <h3>Estratégia</h3>
+                        <p>Todo o conteúdo foi criado após pesquisas reais e validadas. Em plataformas como instagram e tiktok, não utilizar o humor é fatal, são redes sociais e precisam gerar conexão. Ainda mais em um nicho onde a alma de uma atlética são esportes e festas. Porém, obviamente vamos fazer de forma calculada, toda empresa ou influencer dedicado surfa em trends, áudios e conteúdos virais, mas nunca abandona sua essência, então na criação de conteúdo, organizei a seguintes estratégias:</p>
+                    </div>
+                    <div class="strategy-in-image">
+                        <h3>Selecionando Estrelas</h3>
+                        <p>Devemos observar e selecionar pessoas do curso que tem perfil e aparência ideais para a plataforma, nosso papel é encaixar sempre que possível os selecionados nos nossos modelos de reels "POV" humor, etc... Criando um Branding sólido e que tem conexão real com o público. Além de aliviar a área de Design atual.</p>
+                    </div>
+                    <div class="strategy-in-image">
+                        <h3>O Símbolo da Sigma</h3>
+                        <p>NUNCA postar nenhum conteúdo sem uma marca d'água efetiva por mais que minimalista, a não ser que a arte em si já tenha uma identidade visual, devemos ter certeza de que não seja só mais um conteúdo a deriva sem branding.</p>
+                    </div>
                 `;
-            }
-            
-            strategyHTML += `
-                <div class="strategy-in-image">
-                    <h3>Estratégia</h3>
-                    <p>${post.strategy}</p>
-                </div>
-            `;
-            
-            // Add extra cards if they exist (for equipe post)
-            if (post.extraCards) {
-                post.extraCards.forEach(card => {
-                    strategyHTML += `
-                        <div class="strategy-in-image">
-                            <h3>${card.title}</h3>
-                            <p>${card.content}</p>
-                        </div>
-                    `;
-                });
             }
             
             modalImage.innerHTML = strategyHTML;
